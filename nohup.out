@@ -1,0 +1,523 @@
++ [ ! -d ./logs ]
++ [ ! -d ./logs/LongForecasting ]
++ 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+
+./scripts/EXP-LongForecasting/test.sh: 37: 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path ocean.csv --model_id ocean_96_96 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 96 --e_layers 2 --d_layers 1 --factor 3 --enc_in 14 --dec_in 14 --c_out 14 --des Exp --itr 1 --target wtemperature_s --train_epochs 2 --exo Ture
++ [ ! -d ./logs ]
++ [ ! -d ./logs/LongForecasting ]
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv --model_id electricity_96_96 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 96 --e_layers 2 --d_layers 1 --factor 3 --enc_in 321 --dec_in 321 --c_out 321 --des Exp --itr 1
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path weather.csv --model_id weather_96_96 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 96 --e_layers 2 --d_layers 1 --factor 3 --enc_in 21 --dec_in 21 --c_out 21 --des Exp --itr 1 --train_epochs 2
++ 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+
+scripts/EXP-LongForecasting/test_long.sh: 95: 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv --model_id electricity_96_192 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 192 --e_layers 2 --d_layers 1 --factor 3 --enc_in 321 --dec_in 321 --c_out 321 --des Exp --itr 1
++ 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+
+./scripts/EXP-LongForecasting/test.sh: 37: 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path ocean.csv --model_id ocean_96_192 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 192 --e_layers 2 --d_layers 1 --factor 3 --enc_in 14 --dec_in 14 --c_out 14 --des Exp --itr 1 --target wtemperature_s --train_epochs 2 --exo Ture
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path weather.csv --model_id weather_96_192 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 192 --e_layers 2 --d_layers 1 --factor 3 --enc_in 21 --dec_in 21 --c_out 21 --des Exp --itr 1 --train_epochs 2
++ 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+
+scripts/EXP-LongForecasting/test_long.sh: 95: 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv --model_id electricity_96_336 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 336 --e_layers 2 --d_layers 1 --factor 3 --enc_in 321 --dec_in 321 --c_out 321 --des Exp --itr 1
++ 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+
+./scripts/EXP-LongForecasting/test.sh: 37: 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path ocean.csv --model_id ocean_96_336 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 336 --e_layers 2 --d_layers 1 --factor 3 --enc_in 14 --dec_in 14 --c_out 14 --des Exp --itr 1 --target wtemperature_s --train_epochs 2 --exo Ture
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path weather.csv --model_id weather_96_336 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 336 --e_layers 2 --d_layers 1 --factor 3 --enc_in 21 --dec_in 21 --c_out 21 --des Exp --itr 1 --train_epochs 2
++ 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+
+scripts/EXP-LongForecasting/test_long.sh: 95: 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv --model_id electricity_96_720 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 720 --e_layers 2 --d_layers 1 --factor 3 --enc_in 321 --dec_in 321 --c_out 321 --des Exp --itr 1
++ 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+
+./scripts/EXP-LongForecasting/test.sh: 37: 
+  python -u run_longExp.py \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des Exp \
+    --itr 1 \
+    --train_epochs 2 >logs/LongForecasting/$model_name_weather_$pred_len.log
+: not found
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path ocean.csv --model_id ocean_96_720 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 720 --e_layers 2 --d_layers 1 --factor 3 --enc_in 14 --dec_in 14 --c_out 14 --des Exp --itr 1 --target wtemperature_s --train_epochs 2 --exo Ture
++ python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path weather.csv --model_id weather_96_720 --model Our --data custom --features M --seq_len 96 --label_len 48 --pred_len 720 --e_layers 2 --d_layers 1 --factor 3 --enc_in 21 --dec_in 21 --c_out 21 --des Exp --itr 1 --train_epochs 2
++ 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+
+scripts/EXP-LongForecasting/test_long.sh: 95: 
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh1.csv \
+      --model_id ETTh1_96_$pred_len \
+      --model $model_name \
+      --data ETTh1 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth1_$pred_len.log
+  
+  python -u run_longExp.py \
+      --is_training 1 \
+      --root_path ./dataset/ \
+      --data_path ETTh2.csv \
+      --model_id ETTh2_96_$pred_len \
+      --model $model_name \
+      --data ETTh2 \
+      --features M \
+      --seq_len 96 \
+      --label_len 48 \
+      --pred_len $pred_len \
+      --e_layers 2 \
+      --d_layers 1 \
+      --factor 3 \
+      --enc_in 7 \
+      --dec_in 7 \
+      --c_out 7 \
+      --des Exp \
+      --itr 1  >logs/LongForecasting/$model_name_Etth2_$pred_len.log
+: not found
++ ne
+scripts/EXP-LongForecasting/test_long.sh: 97: ne: not found
+scripts/EXP-LongForecasting/test_long.sh: 98: Syntax error: "done" unexpected
